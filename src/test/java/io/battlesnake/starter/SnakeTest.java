@@ -35,7 +35,7 @@ public class SnakeTest {
     void startTest() throws IOException {
         JsonNode startRequest = OBJECT_MAPPER.readTree("{}");
         Map<String, String> response = handler.start(startRequest);
-        assertEquals("#ff00ff", response.get("color"));
+        assertEquals("#54d396", response.get("color"));
     }
 
     @Test
