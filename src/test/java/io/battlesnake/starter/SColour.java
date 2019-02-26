@@ -1,7 +1,12 @@
+package io.battlesnake.starter;
+
 public class SColour {
 	String colour = "#54d396";
 
-	String getC() {
+	SColour() {
+
+	}
+	public static String getC() {
 		return this.colour;
 	}
 }
