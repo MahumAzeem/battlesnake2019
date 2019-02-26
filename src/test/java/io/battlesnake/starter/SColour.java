@@ -5,6 +5,6 @@ public class SColour {
 
 	}
 	public static String getC() {
-		return "#54d396";;
+		return "#54d396";
 	}
 }
