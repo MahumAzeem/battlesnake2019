@@ -14,8 +14,12 @@ import java.util.ArrayList;
 	private SnakeData[] snakes;
 	private SnakeData self;
 	private Coord[] food;
+	/*SnakeData and Coord are objects
+	Coord contains 2 ints (x, y)
+	SnakeData contains Strings id, name, int health, Coord[] body - derives size from length of body
+	*/
 
-	public BoardData(JsonNode rawData) {
+	public Parse(JsonNode rawData) {
 		gameID = rawData.get("game").get("id").asText();
 		JsonNode rawBoard = rawData.get("board");
 		JsonNode rawFood = rawBoard.get("food");
