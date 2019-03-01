@@ -119,8 +119,8 @@ public class Snake {
          */
         public Map<String, String> move(JsonNode moveRequest) {
             Map<String, String> response = new HashMap<>();
-            String nextMove = "down";
-            response.put("move", "right");
+            String nextMove = "left";
+            response.put("move", nextMove);
             return response;
         }
 
