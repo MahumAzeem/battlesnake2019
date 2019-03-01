@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="io.battlesnake.starter.SnakeTest" time="0.314" tests="4" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\mahum\Documents\Mahum\Battlesnake\battlesnake2019\target\test-classes;C:\Users\mahum\Documents\Mahum\Battlesnake\battlesnake2019\target\classes;C:\Users\mahum\.m2\repository\com\sparkjava\spark-core\2.7.2\spark-core-2.7.2.jar;C:\Users\mahum\.m2\repository\org\slf4j\slf4j-api\1.7.13\slf4j-api-1.7.13.jar;C:\Users\mahum\.m2\repository\org\eclipse\jetty\jetty-server\9.4.8.v20171121\jetty-server-9.4.8.v20171121.jar;C:\Users\mahum\.m2\repository\javax\servlet\javax.servlet-api\3.1.0\javax.servlet-api-3.1.0.jar;C:\Users\mahum\.m2\repository\org\eclipse\jetty\jetty-http\9.4.8.v20171121\jetty-http-9.4.8.v20171121.jar;C:\Users\mahum\.m2\repository\org\eclipse\jetty\jetty-util\9.4.8.v20171121\jetty-util-9.4.8.v20171121.jar;C:\Users\mahum\.m2\repository\org\eclipse\jetty\jetty-io\9.4.8.v20171121\jetty-io-9.4.8.v20171121.jar;C:\Users\mahum\.m2\repository\org\eclipse\jetty\jetty-webapp\9.4.8.v20171121\jetty-webapp-9.4.8.v20171121.jar;C:\Users\mahum\.m2\repository\org\eclipse\jetty\jetty-xml\9.4.8.v20171121\jetty-xml-9.4.8.v20171121.jar;C:\Users\mahum\.m2\repository\org\eclipse\jetty\jetty-servlet\9.4.8.v20171121\jetty-servlet-9.4.8.v20171121.jar;C:\Users\mahum\.m2\repository\org\eclipse\jetty\jetty-security\9.4.8.v20171121\jetty-security-9.4.8.v20171121.jar;C:\Users\mahum\.m2\repository\org\eclipse\jetty\websocket\websocket-server\9.4.8.v20171121\websocket-server-9.4.8.v20171121.jar;C:\Users\mahum\.m2\repository\org\eclipse\jetty\websocket\websocket-common\9.4.8.v20171121\websocket-common-9.4.8.v20171121.jar;C:\Users\mahum\.m2\repository\org\eclipse\jetty\websocket\websocket-client\9.4.8.v20171121\websocket-client-9.4.8.v20171121.jar;C:\Users\mahum\.m2\repository\org\eclipse\jetty\jetty-client\9.4.8.v20171121\jetty-client-9.4.8.v20171121.jar;C:\Users\mahum\.m2\repository\org\eclipse\jetty\websocket\websocket-servlet\9.4.8.v20171121\websocket-servlet-9.4.8.v20171121.jar;C:\Users\mahum\.m2\repository\org\eclipse\jetty\websocket\websocket-api\9.4.8.v20171121\websocket-api-9.4.8.v20171121.jar;C:\Users\mahum\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.8.11.1\jackson-databind-2.8.11.1.jar;C:\Users\mahum\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.8.0\jackson-annotations-2.8.0.jar;C:\Users\mahum\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.8.10\jackson-core-2.8.10.jar;C:\Users\mahum\.m2\repository\org\slf4j\slf4j-simple\1.7.21\slf4j-simple-1.7.21.jar;C:\Users\mahum\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.2.0\junit-jupiter-api-5.2.0.jar;C:\Users\mahum\.m2\repository\org\apiguardian\apiguardian-api\1.0.0\apiguardian-api-1.0.0.jar;C:\Users\mahum\.m2\repository\org\opentest4j\opentest4j\1.1.0\opentest4j-1.1.0.jar;C:\Users\mahum\.m2\repository\org\junit\platform\junit-platform-commons\1.2.0\junit-platform-commons-1.2.0.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="user.timezone" value=""/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="user.country" value="CA"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_191\jre\bin"/>
+    <property name="sun.java.command" value="C:\Users\mahum\AppData\Local\Temp\surefire1800409501430199779\surefirebooter1238614763396616284.jar C:\Users\mahum\AppData\Local\Temp\surefire1800409501430199779 2019-02-25T19-27-30_336-jvmRun1 surefire6460743830709932918tmp surefire_09171269955889649131tmp"/>
+    <property name="surefire.test.class.path" value="C:\Users\mahum\Documents\Mahum\Battlesnake\battlesnake2019\target\test-classes;C:\Users\mahum\Documents\Mahum\Battlesnake\battlesnake2019\target\classes;C:\Users\mahum\.m2\repository\com\sparkjava\spark-core\2.7.2\spark-core-2.7.2.jar;C:\Users\mahum\.m2\repository\org\slf4j\slf4j-api\1.7.13\slf4j-api-1.7.13.jar;C:\Users\mahum\.m2\repository\org\eclipse\jetty\jetty-server\9.4.8.v20171121\jetty-server-9.4.8.v20171121.jar;C:\Users\mahum\.m2\repository\javax\servlet\javax.servlet-api\3.1.0\javax.servlet-api-3.1.0.jar;C:\Users\mahum\.m2\repository\org\eclipse\jetty\jetty-http\9.4.8.v20171121\jetty-http-9.4.8.v20171121.jar;C:\Users\mahum\.m2\repository\org\eclipse\jetty\jetty-util\9.4.8.v20171121\jetty-util-9.4.8.v20171121.jar;C:\Users\mahum\.m2\repository\org\eclipse\jetty\jetty-io\9.4.8.v20171121\jetty-io-9.4.8.v20171121.jar;C:\Users\mahum\.m2\repository\org\eclipse\jetty\jetty-webapp\9.4.8.v20171121\jetty-webapp-9.4.8.v20171121.jar;C:\Users\mahum\.m2\repository\org\eclipse\jetty\jetty-xml\9.4.8.v20171121\jetty-xml-9.4.8.v20171121.jar;C:\Users\mahum\.m2\repository\org\eclipse\jetty\jetty-servlet\9.4.8.v20171121\jetty-servlet-9.4.8.v20171121.jar;C:\Users\mahum\.m2\repository\org\eclipse\jetty\jetty-security\9.4.8.v20171121\jetty-security-9.4.8.v20171121.jar;C:\Users\mahum\.m2\repository\org\eclipse\jetty\websocket\websocket-server\9.4.8.v20171121\websocket-server-9.4.8.v20171121.jar;C:\Users\mahum\.m2\repository\org\eclipse\jetty\websocket\websocket-common\9.4.8.v20171121\websocket-common-9.4.8.v20171121.jar;C:\Users\mahum\.m2\repository\org\eclipse\jetty\websocket\websocket-client\9.4.8.v20171121\websocket-client-9.4.8.v20171121.jar;C:\Users\mahum\.m2\repository\org\eclipse\jetty\jetty-client\9.4.8.v20171121\jetty-client-9.4.8.v20171121.jar;C:\Users\mahum\.m2\repository\org\eclipse\jetty\websocket\websocket-servlet\9.4.8.v20171121\websocket-servlet-9.4.8.v20171121.jar;C:\Users\mahum\.m2\repository\org\eclipse\jetty\websocket\websocket-api\9.4.8.v20171121\websocket-api-9.4.8.v20171121.jar;C:\Users\mahum\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.8.11.1\jackson-databind-2.8.11.1.jar;C:\Users\mahum\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.8.0\jackson-annotations-2.8.0.jar;C:\Users\mahum\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.8.10\jackson-core-2.8.10.jar;C:\Users\mahum\.m2\repository\org\slf4j\slf4j-simple\1.7.21\slf4j-simple-1.7.21.jar;C:\Users\mahum\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.2.0\junit-jupiter-api-5.2.0.jar;C:\Users\mahum\.m2\repository\org\apiguardian\apiguardian-api\1.0.0\apiguardian-api-1.0.0.jar;C:\Users\mahum\.m2\repository\org\opentest4j\opentest4j\1.1.0\opentest4j-1.1.0.jar;C:\Users\mahum\.m2\repository\org\junit\platform\junit-platform-commons\1.2.0\junit-platform-commons-1.2.0.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\mahum"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_191\jre"/>
+    <property name="basedir" value="C:\Users\mahum\Documents\Mahum\Battlesnake\battlesnake2019"/>
+    <property name="file.separator" value="\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="C:\Users\mahum\AppData\Local\Temp\surefire1800409501430199779\surefirebooter1238614763396616284.jar"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_191\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_191\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_191\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_191\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_191\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_191\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_191\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_191\jre\classes"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="1.8.0_191-b12"/>
+    <property name="user.name" value="mahum"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_191\jre\lib\endorsed"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\mahum\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\mahum\AppData\Local\Temp\"/>
+    <property name="java.version" value="1.8.0_191"/>
+    <property name="user.dir" value="C:\Users\mahum\Documents\Mahum\Battlesnake\battlesnake2019"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_191\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Users\mahum\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\mahum\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Java\jdk-10.0.2\bin;C:\Program Files\MATLAB\R2018b\runtime\win64;C:\Program Files\MATLAB\R2018b\bin;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\nodejs;C:\Program Files\Java\jdk1.8.0_191\bin;C:\Program Files\apache-maven-3.6.0\bin;C:\Program Files\Intel\WiFi\bin;C:\Program Files\Common Files\Intel\WirelessCommon;C:\Users\mahum\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Java\jdk-10.0.2\bin;C:\Users\mahum\AppData\Roaming\npm;C:\Program Files\heroku\bin;C:\Users\mahum\AppData\Local\atom\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl;."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="25.191-b12"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_191\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="52.0"/>
+  </properties>
+  <testcase name="startTest" classname="io.battlesnake.starter.SnakeTest" time="0.037"/>
+  <testcase name="endTest" classname="io.battlesnake.starter.SnakeTest" time="0"/>
+  <testcase name="pingTest" classname="io.battlesnake.starter.SnakeTest" time="0.001"/>
+  <testcase name="moveTest" classname="io.battlesnake.starter.SnakeTest" time="0"/>
+</testsuite>
