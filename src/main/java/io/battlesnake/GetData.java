@@ -2,9 +2,7 @@ package io.battlesnake.starter;
 import com.fasterxml.jackson.databind.JsonNode;
 import java.util.ArrayList;
 
-import java.util.logging.Logger;
-import java.util.logging.FileHandler;
-import java.util.logging.Level;
+
 
 public class GetData {
 	protected String id;
@@ -18,32 +16,14 @@ public class GetData {
 
 	//initializes the data
 	public GetData(JsonNode data) {
-		FileHandler fh;
-		try {
-			fh = new FileHandler("./logs/log", true);
-			Logger logger = Logger.getLogger("logtest");
-			logger.addHandler(fh);
-			logger.setLevel(Level.ALL);
-			logger.log(Level.INFO, "Init");
-
-			id = data.get("game").get("id").asText();
-			logger.log(Level.INFO, "id");
-			turn = data.get("turn").asInt();
-			logger.log(Level.INFO, "turn");
-			height = data.get("board").get("height").asInt();
-			logger.log(Level.INFO, "height");
-			width = data.get("board").get("width").asInt();
-			logger.log(Level.INFO, "width");
-			board = new int[width][height];
-			refood(data);
-			logger.log(Level.INFO, "food");
-			initsnakes(data);
-			logger.log(Level.INFO, "snakes");
-			initself(data);
-			logger.log(Level.INFO, "you");
-		}
-		catch(Exception e) {
-		}
+		id = data.get("game").get("id").asText();
+		turn = data.get("turn").asInt();
+		height = data.get("board").get("height").asInt();
+		width = data.get("board").get("width").asInt();
+		board = new int[width][height];
+		refood(data);
+		initsnakes(data);
+		initself(data);
 	}
 
 	/*
