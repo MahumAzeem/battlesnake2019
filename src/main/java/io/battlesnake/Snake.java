@@ -23,7 +23,6 @@ public class Snake {
     private static final ObjectMapper JSON_MAPPER = new ObjectMapper();
     private static final Handler HANDLER = new Handler();
     private static final Logger LOG = LoggerFactory.getLogger(Snake.class);
-    public static final FileHandler handler = new FileHandler("default.log", true);
     /**
      * Main entry point.
      *
