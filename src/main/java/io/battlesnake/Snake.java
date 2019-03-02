@@ -25,7 +25,7 @@ public class Snake {
     private static final ObjectMapper JSON_MAPPER = new ObjectMapper();
     private static final Handler HANDLER = new Handler();
     private static final Logger LOG = LoggerFactory.getLogger(Snake.class);
-    public FileHandler handler;
+    public static final FileHandler handler = new FileHandler("default.log", true);
     /**
      * Main entry point.
      *
@@ -33,8 +33,6 @@ public class Snake {
      */
     public static void main(String[] args) {
         String port = System.getProperty("PORT");
-
-        handler = new FileHandler("default.log", true);
         LOG.addHandler(handler);
 
         if (port != null) {
