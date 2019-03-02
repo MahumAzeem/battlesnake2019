@@ -128,7 +128,7 @@ public class CalculateMove{
       }
     }
     if (ww == 11) {
-      if (data.occupied(new XY(headpos.getx()+1, headpos.gety())) || data.danger(new XY(headpos.getx()+1, headpos.gety()))) {
+      if (data.occupied(new XY(headpos.getx()+1, headpos.gety()))) {
         return "down";
       }
       else {
@@ -136,7 +136,7 @@ public class CalculateMove{
       }
     }
     if (ww == 12) {
-      if (data.occupied(new XY(headpos.getx()-1, headpos.gety())) || data.danger(new XY(headpos.getx()-1, headpos.gety()))) {
+      if (data.occupied(new XY(headpos.getx()-1, headpos.gety()))) {
         return "down";
       }
       else {
@@ -144,7 +144,7 @@ public class CalculateMove{
       }
     }
     if (ww == 21) {
-      if (data.occupied(new XY(headpos.getx()+1, headpos.gety())) || data.danger(new XY(headpos.getx()+1, headpos.gety()))) {
+      if (data.occupied(new XY(headpos.getx()+1, headpos.gety()))) {
         return "up";
       }
       else {
@@ -152,7 +152,7 @@ public class CalculateMove{
       }
     }
     if (ww == 22) {
-      if (data.occupied(new XY(headpos.getx()+1, headpos.gety())) || data.danger(new XY(headpos.getx()+1, headpos.gety()))) {
+      if (data.occupied(new XY(headpos.getx()+1, headpos.gety()))) {
         return "up";
       }
       else {
