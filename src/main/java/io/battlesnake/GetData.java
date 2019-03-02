@@ -26,23 +26,6 @@ public class GetData {
 		initself(data);
 	}
 
-	/*
-	//updates the data
-	public void update(JsonNode data) {
-		turn = data.get("turn").asInt();
-		JsonNode enemies = data.get("snakes");
-		for (int i = 0; i < enemies.size(); i++) {
-			JsonNode enemy = enemies.get(i);
-			Snek t = findID(enemy.get("id").asText());
-			if (t==null) continue;
-			updateSnake(enemy, t);
-		}
-		updateSnake(data.get("you"),you);
-
-		refood(data);
-	}
-	*/
-
 	public void refood(JsonNode data) {
 			JsonNode foods = data.get("board").get("food");
 			food = new XY[foods.size()];
@@ -51,6 +34,14 @@ public class GetData {
 				int y = foods.get(i).get("y").asInt();
 				food[i] = new XY(x,y);
 			}
+	}
+
+	public boolean hasfood(XY pos) {
+		for (int i = 0; i < food.length; i++) {
+			if (food[i].getDistance(pos) == 0) {
+				return true;
+			}
+		}
 	}
 
 	private void initsnakes(JsonNode data) {
