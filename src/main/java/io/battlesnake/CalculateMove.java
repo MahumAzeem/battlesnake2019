@@ -31,19 +31,19 @@ public class CalculateMove{
     XY headpos = you.getHead();
     int ww = wallWarning(headpos, data.width, data.height);
     if (ww == 1 || ww == 2) {
-      if (data.occupied(new XY(headpos.getx(), headpos.gety() -1 )) || data.danger(new XY(headpos.getx(), headpos.gety() -1 ))) {
-        return "down";
-      }
-      else if (data.occupied(new XY(headpos.getx(), headpos.gety() +1 )) || data.danger(new XY(headpos.getx(), headpos.gety() +1 ))) {
+      if (!(data.occupied(new XY(headpos.getx(), headpos.gety() -1 )) || data.danger(new XY(headpos.getx(), headpos.gety() -1 )))) {
         return "up";
+      }
+      else if (!(data.occupied(new XY(headpos.getx(), headpos.gety() +1 )) || data.danger(new XY(headpos.getx(), headpos.gety() +1 )))) {
+        return "down";
       }
     }
     else if (ww == 10 || ww == 20) {
-      if (data.occupied(new XY(headpos.getx()+1, headpos.gety())) || data.danger(new XY(headpos.getx()+1, headpos.gety()))) {
-        return "left";
-      }
-      else if (data.occupied(new XY(headpos.getx()-1, headpos.gety())) || data.danger(new XY(headpos.getx()-1, headpos.gety()))) {
+      if (!(data.occupied(new XY(headpos.getx()+1, headpos.gety())) || data.danger(new XY(headpos.getx()+1, headpos.gety())))) {
         return "right";
+      }
+      else if (!(data.occupied(new XY(headpos.getx()-1, headpos.gety())) || data.danger(new XY(headpos.getx()-1, headpos.gety())))) {
+        return "left";
       }
     }
     if (ww == 11) {
