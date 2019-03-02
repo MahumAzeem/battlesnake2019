@@ -40,7 +40,7 @@ public class GetData {
 
 	public void refood(JsonNode data) {
 			JsonNode foods = data.get("board").get("food");
-			food = new XY[food.size()];
+			food = new XY[foods.size()];
 			for (int i = 0; i < food.size(); i++) {
 				int x = foods.get(i).get("x").asInt();
 				int y = foods.get(i).get("y").asInt();
@@ -61,12 +61,11 @@ public class GetData {
 	}
 
 	private Snek initsnake(JsonNode snake) {
-		Snek temp = new Snek(snake.get("id"), snake.get("name"), snake.get("health"));
+		Snek temp = new Snek(snake.get("id").asText(), snake.get("name").asText(), snake.get("health").asInt());
 		int size = snake.get("body").size();
 		if (size == 0) continue; //it's dead
-		for (int j = 0; j < size; i++) {
-			temp.addBod(new XY(snake.get("body").get("x").asInt(),
-						snake.get("body").get("y").asInt()));
+		for (int j = 0; j < size; j++) {
+			temp.addBod(new XY(snake.get("body").get("x").asInt(), snake.get("body").get("y").asInt()));
 		}
 		return temp;
 	}
@@ -81,12 +80,12 @@ public class GetData {
 
 	private void updateSnake(JsonNode snake, Snek stored) {
 		JsonNode head = snake.get("body").get(0);
-		XY h = new XY(head.get("x"), head.get("y"));
+		XY h = new XY(head.get("x").asInt(), head.get("y").asInt());
 		stored.move(h);
 		if (snake.get("body").size() > stored.size()) {
 			stored.grow();
 		}
-		stored.sethp(snake.get("health"));
+		stored.sethp(snake.get("health").asInt());
 	}
 
 	public Snek getYou() {

@@ -23,7 +23,6 @@ public class Snake {
     private static final ObjectMapper JSON_MAPPER = new ObjectMapper();
     private static final Handler HANDLER = new Handler();
     private static final Logger LOG = LoggerFactory.getLogger(Snake.class);
-    private GetData dataparser;
 
     /**
      * Main entry point.
@@ -51,7 +50,7 @@ public class Snake {
      * Handler class for dealing with the routes set up in the main method.
      */
     public static class Handler {
-
+    	private GetData dataparser;
         /**
          * For the ping request
          */
@@ -139,8 +138,8 @@ public class Snake {
          */
         public Map<String, String> end(JsonNode endRequest) {
         	//update existing stored data
-        	dataparser.update(moveRequest);
-        	
+        	dataparser.update(endRequest);
+
             Map<String, String> response = new HashMap<>();
             return response;
         }

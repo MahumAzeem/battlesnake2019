@@ -6,10 +6,10 @@ public class XY{
 	protected int y;
 
 	public XY() {
-		Position(0,0);
+		XY(0,0);
 	}
 	public XY(int x) {
-		Position(x, 0);
+		XY(x, 0);
 	}
 	public XY(int x, int y) {
 		this.x = x;
