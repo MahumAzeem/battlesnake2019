@@ -34,7 +34,7 @@ public class Snake {
     public static void main(String[] args) {
         String port = System.getProperty("PORT");
 
-        FileHandler handler = new FileHandler("default.log", append);
+        FileHandler handler = new FileHandler("default.log", true);
         LOG.addHandler(handler);
 
         if (port != null) {
