@@ -107,7 +107,7 @@ public class Snake {
         public Map<String, String> start(JsonNode startRequest) {
             GetData dataparser = new GetData(startRequest);
             Map<String, String> response = new HashMap<>();
-            response.put("color", "#54d396");
+            response.put("color", "#53d2a6");
             response.put("headType", "safe");
             response.put("tailType", "hook");
             return response;
