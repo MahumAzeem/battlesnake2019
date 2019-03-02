@@ -132,7 +132,7 @@ public class Snake {
          * @return responses back to the engine are ignored.
          */
         public Map<String, String> end(JsonNode endRequest) {
-            //dataparser.update(endRequest);
+            GetData dataparser = new GetData(endRequest);
             Map<String, String> response = new HashMap<>();
             return response;
         }
