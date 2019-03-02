@@ -24,6 +24,7 @@ public class GetData {
 		initself(data);
 	}
 
+	/*
 	//updates the data
 	public void update(JsonNode data) {
 		turn = data.get("turn").asInt();
@@ -38,6 +39,7 @@ public class GetData {
 
 		refood(data);
 	}
+	*/
 
 	public void refood(JsonNode data) {
 			JsonNode foods = data.get("board").get("food");
@@ -80,6 +82,7 @@ public class GetData {
 		return null;
 	}
 
+	/*
 	private void updateSnake(JsonNode snake, Snek stored) {
 		JsonNode head = snake.get("body").get(0);
 		XY h = new XY(head.get("x").asInt(), head.get("y").asInt());
@@ -92,6 +95,7 @@ public class GetData {
 		}
 		stored.sethp(snake.get("health").asInt());
 	}
+	*/
 
 	public Snek getYou() {
 		return you;
