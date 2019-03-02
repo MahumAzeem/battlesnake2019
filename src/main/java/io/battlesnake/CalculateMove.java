@@ -71,7 +71,7 @@ public class CalculateMove{
       }
     }
     if (ww == 22) {
-      if (data.occupied(new XY(headpos.getx()+1, headpos.gety()))) {
+      if (data.occupied(new XY(headpos.getx()-1, headpos.gety()))) {
         return "up";
       }
       else {
