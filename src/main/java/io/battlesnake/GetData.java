@@ -31,6 +31,7 @@ public class GetData {
 		for (int i = 0; i < enemies.size(); i++) {
 			JsonNode enemy = enemies.get(i);
 			Snek t = findID(enemy.get("id").asText());
+			if (t==null) continue;
 			updateSnake(enemy, t);
 		}
 		updateSnake(data.get("you"),you);
@@ -76,6 +77,7 @@ public class GetData {
 				return snakes[i];
 			}
 		}
+		return null;
 	}
 
 	private void updateSnake(JsonNode snake, Snek stored) {
