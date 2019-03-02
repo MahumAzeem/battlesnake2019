@@ -54,7 +54,7 @@ public class GetData {
 	}
 
 	private void initsnakes(JsonNode data) {
-		JsonNode enemies = data.get.("board").get("snakes");
+		JsonNode enemies = data.get("board").get("snakes");
 		snakes = new Snek[enemies.size()];
 		for(int i = 0; i < enemies.size(); i++) {
 			snakes[i] = initsnake(enemies.get(i));
