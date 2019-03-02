@@ -121,7 +121,7 @@ public class CalculateMove{
   }
 
   public String getMove(XY headpos, XY[] enemies){
-    XY newPos = new XY(headpos.getx(),headpos.gety())
+    XY newPos = new XY(headpos.getx(),headpos.gety());
     int ww = wallWarning(headpos, data.width, data.height);
 
     //////////////checks y//////////////////
@@ -171,11 +171,11 @@ public class CalculateMove{
     }
 
     int currx=headpos.getx();
-    int curry=headpos.gety()
+    int curry=headpos.gety();
     int newx=newPos.getx();
     int newy=newPos.gety();
     ///////////////TURN FROM XY TO DIRECTIONS///////////
-    if(currx-newx) == 1){
+    if((currx-newx) == 1){
       return "right";
     }
     else if((currx-newx) == -1){
