@@ -79,9 +79,21 @@ public class CalculateMove{
       }
     }
 
-    /*
-    if ()
-    */
+    
+    if (!(data.occupied(new XY(headpos.getx(), headpos.gety() -1 )) || data.danger(new XY(headpos.getx(), headpos.gety() -1 )))) {
+      return "up";
+    }
+    if (!(data.occupied(new XY(headpos.getx(), headpos.gety() + 1 )) || data.danger(new XY(headpos.getx(), headpos.gety() +1 )))) {
+      return "down";
+    }
+    if (!(data.occupied(new XY(headpos.getx()+1, headpos.gety())) || data.danger(new XY(headpos.getx()+1, headpos.gety())))) {
+      return "right";
+    }
+
+    if (!(data.occupied(new XY(headpos.getx()-1, headpos.gety())) || data.danger(new XY(headpos.getx()-1, headpos.gety())))) {
+      return "left";
+    }    
+    
     return null; //go forward?
   }
 
