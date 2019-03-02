@@ -4,13 +4,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 public class XY{
 	protected int x;
 	protected int y;
-
-	public XY() {
-		XY(0,0);
-	}
-	public XY(int x) {
-		XY(x, 0);
-	}
+	
 	public XY(int x, int y) {
 		this.x = x;
 		this.y = y;

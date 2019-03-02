@@ -30,7 +30,7 @@ public class GetData {
 		JsonNode enemies = data.get("snakes");
 		for (int i = 0; i < enemies.size(); i++) {
 			JsonNode enemy = enemies.get(i);
-			Snek t = findID(enemy.get("id"));
+			Snek t = findID(enemy.get("id").asText());
 			updateSnake(enemy, t);
 		}
 		updateSnake(data.get("you"),you);
@@ -41,7 +41,7 @@ public class GetData {
 	public void refood(JsonNode data) {
 			JsonNode foods = data.get("board").get("food");
 			food = new XY[foods.size()];
-			for (int i = 0; i < food.size(); i++) {
+			for (int i = 0; i < foods.size(); i++) {
 				int x = foods.get(i).get("x").asInt();
 				int y = foods.get(i).get("y").asInt();
 				food[i] = new XY(x,y);
