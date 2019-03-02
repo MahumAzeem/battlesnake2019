@@ -18,7 +18,7 @@ public class CalculateMove{
   		foodChaser(data.food[0], data.you);
   		return;
   	}
-  	XY headpos = data.you.getHead().getx() == data.width-1;
+  	XY headpos = data.you.getHead();
   	int ww = wallWarning(headpos, data.width, data.height);
   	if (ww == 1 || ww == 2) {
   		if (data.occupied(new XY(headpos.getx(), headpos.gety() -1 ))) {
