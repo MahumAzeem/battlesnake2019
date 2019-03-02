@@ -96,8 +96,7 @@ public class GetData {
 	}
 
 	private boolean occupied(Snek snake, XY pos) {
-		snake.occupies(pos);
-		return false;
+		return snake.occupies(pos);
 	}
 
 }
