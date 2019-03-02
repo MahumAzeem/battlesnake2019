@@ -8,7 +8,7 @@ public class CalculateMove{
     nextMove = "down";
   }
 
-  public String getMove(){
+  public static String getMove(){
     return this.nextMove;
   }
 
