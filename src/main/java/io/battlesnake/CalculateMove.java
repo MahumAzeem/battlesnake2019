@@ -39,7 +39,7 @@ public class CalculateMove{
       }
     }
     if (ww == 10 || ww == 20) {
-      if (data.occupied(new XY(headpos.getx()-1, headpos.gety())) || data.danger(new XY(headpos.getx()-1, headpos.gety())) ) {
+      if (data.occupied(new XY(headpos.getx()+1, headpos.gety())) || data.danger(new XY(headpos.getx()+1, headpos.gety())) ) {
         return "left";
       }
       else {
@@ -78,6 +78,10 @@ public class CalculateMove{
         return "left";
       }
     }
+
+    /*
+    if ()
+    */
     return null; //go forward?
   }
 
@@ -109,7 +113,6 @@ public class CalculateMove{
         return "up";
       }
     }
-    int ww = wallWarning(pos, data.width, data.height);
     return "escape";
   }
 
