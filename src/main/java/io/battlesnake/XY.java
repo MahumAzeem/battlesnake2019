@@ -43,4 +43,12 @@ public class XY{
 		this.y = y;
 	}
 
+	public int getDistance(XY other) {
+		int dx = other.getx() - this.x;
+		int dy = other.gety() - this.y;
+		if (dx < 0) dx *= -1;
+		if (dy < 0) dy *= -1;
+		return dx+dy;
+	}
+
 }
