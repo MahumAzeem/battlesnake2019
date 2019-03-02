@@ -194,7 +194,7 @@ public class CalculateMove{
       return "left";
     }
     else if((curry-newy) >= 1){
-      return "up";
+      return "left";
     }
     else if((curry-newy) <= -1){
       return "down";
