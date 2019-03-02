@@ -121,7 +121,7 @@ public class CalculateMove{
   }
 
   public String getMove(){
-    return getMove(data.you.getHead(),data.Snakes() )
+    return getMove(data.you.getHead(),data.Snakes());
   }
 
   private String getMove(XY headpos, Snek[] snakes){
@@ -131,7 +131,7 @@ public class CalculateMove{
     }
     XY[] enemies = allpos.toArray();
 
-    
+
     XY newPos = new XY(headpos.getx(),headpos.gety());
     int ww = wallWarning(headpos, data.width, data.height);
 
