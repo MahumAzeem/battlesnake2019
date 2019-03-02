@@ -50,7 +50,7 @@ public class Snake {
      * Handler class for dealing with the routes set up in the main method.
      */
     public static class Handler {
-        //GetData dataparser;
+        GetData dataparser;
         /**
          * For the ping request
          */
@@ -106,7 +106,7 @@ public class Snake {
          * @return a response back to the engine containing the snake setup values.
          */
         public Map<String, String> start(JsonNode startRequest) {
-            //dataparser = new GetData(startRequest);
+            dataparser = new GetData(startRequest);
             Map<String, String> response = new HashMap<>();
             response.put("color", "#ff00ff");
             return response;
