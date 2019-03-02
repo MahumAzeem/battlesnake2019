@@ -121,7 +121,7 @@ public class CalculateMove{
   }
 
   public String getMove(){
-    return getMove(data.you.getHead(),data.Snakes());
+    return getMove(data.you.getHead(),data.snakes);
   }
 
   private String getMove(XY headpos, Snek[] snakes){
@@ -129,7 +129,8 @@ public class CalculateMove{
     for (int i = 0; i < snakes.length; i++) {
       allpos.addAll(snakes[i].body);
     }
-    XY[] enemies = allpos.toArray();
+    XY[] enemies = new XY[allpos.size()];
+    enemies = allpos.toArray(enemies);
 
 
     XY newPos = new XY(headpos.getx(),headpos.gety());
