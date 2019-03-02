@@ -43,7 +43,6 @@ public class GetData {
 			logger.log(Level.INFO, "you");
 		}
 		catch(Exception e) {
-			return null;
 		}
 	}
 
