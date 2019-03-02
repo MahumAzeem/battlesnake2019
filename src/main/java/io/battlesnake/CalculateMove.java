@@ -19,7 +19,7 @@ public class CalculateMove{
   		foodChaser(data.food[0], data.you);
   		return;
   	}
-  	Random rand;
+  	Random rand = new Random();
   	int n = rand.nextInt(4);
   	switch(n) {
   		case 0:
