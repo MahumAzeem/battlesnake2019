@@ -96,11 +96,7 @@ public class GetData {
 	}
 
 	private boolean occupied(Snek snake, XY pos) {
-		for (int i = 0; i < snake.body.size(); i++) {
-			if (snake.body.get(i).getDistance(pos) == 0) {
-				return true;
-			}
-		}
+		snake.occupies(pos);
 		return false;
 	}
 

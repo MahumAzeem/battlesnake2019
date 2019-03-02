@@ -24,13 +24,6 @@ public class Snek {
 		body.add(bod);
 	}
 
-	//adds an extra part at the tail
-	public void grow() {
-		XY t = new XY(0,0);
-		t.seta(body.get(getTailInd()).geta());
-		body.add(t);
-	}
-
 	//gets the index of the tail
 	public int getTailInd() {
 		return body.size()-1;
@@ -51,6 +44,15 @@ public class Snek {
 	//returns the size of the snake
 	public int size() {
 		return body.size();
+	}
+
+	public boolean occupies(XY pos) {
+		for (int i = 0; i < body.size(); i++) {
+			if (body.get(i).getDistance(pos) == 0) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 	/*-------------------------------------
