@@ -13,7 +13,7 @@ public class CalculateMove{
     return this.nextMove;
   }
 
-  public foodChaser(XY food, Snek snake) {
+  public void foodChaser(XY food, Snek snake) {
   	XY pos = snake.getHead();
   	int x = food.getx() - pos.getx();
   	if (x > 0) {
