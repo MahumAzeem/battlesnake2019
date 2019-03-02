@@ -31,7 +31,7 @@ public class CalculateMove{
     XY headpos = you.getHead();
     int ww = wallWarning(headpos, data.width, data.height);
     if (ww == 1 || ww == 2) {
-      if (data.occupied(new XY(headpos.getx(), headpos.gety() -1 )) || data.danger(new XY(headpos.getx(), headpos.gety() -1 ))) {
+      if (data.occupied(new XY(headpos.getx(), headpos.gety() +1 )) || data.danger(new XY(headpos.getx(), headpos.gety() +1 ))) {
         return "down";
       }
       else {
