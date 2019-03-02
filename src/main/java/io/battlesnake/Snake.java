@@ -10,6 +10,8 @@ import spark.Response;
 import java.util.HashMap;
 import java.util.Map;
 
+import java.util.logging.FileHandler;
+
 import static spark.Spark.port;
 import static spark.Spark.post;
 import static spark.Spark.get;
@@ -23,7 +25,7 @@ public class Snake {
     private static final ObjectMapper JSON_MAPPER = new ObjectMapper();
     private static final Handler HANDLER = new Handler();
     private static final Logger LOG = LoggerFactory.getLogger(Snake.class);
-
+    
     /**
      * Main entry point.
      *
@@ -31,6 +33,10 @@ public class Snake {
      */
     public static void main(String[] args) {
         String port = System.getProperty("PORT");
+
+        FileHandler handler = new FileHandler("default.log", append);
+        LOG.addHandler(handler);
+
         if (port != null) {
             LOG.info("Found system provided port: {}", port);
         } else {
