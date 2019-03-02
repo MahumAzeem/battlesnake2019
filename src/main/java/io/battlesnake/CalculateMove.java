@@ -6,6 +6,9 @@ public class CalculateMove(GetData dataparser){
 
   public CalculateMove(GetData dataparser){
     nextMove = "down";
-  }  
+  }
 
+  public String getNextMove(){
+    return nextMove;
+  }
 }
