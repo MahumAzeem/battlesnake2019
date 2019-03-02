@@ -18,17 +18,55 @@ public class CalculateMove{
   		foodChaser(data.food[0], data.you);
   		return;
   	}
-  	if (data.you.getHead().getx() == 0) {
-  		nextMove = "up";
+  	XY headpos = data.you.getHead().getx() == data.width-1;
+  	int ww = wallWarning(headpos, data.width, data.height);
+  	if (ww == 1 || ww == 2) {
+  		if (data.occupied(new XY(headpos.getx(), headpos.gety() -1 ))) {
+  			nextMove = "down";
+  		}
+  		else {
+  			nextMove = "up";
+  		}
   	}
-  	else if (data.you.getHead().getx() == data.width-1) {
-  		nextMove = "down";
+  	if (ww == 10 || ww == 20) {
+  		if (data.occupied(new XY(headpos.getx()-1, headpos.gety()))) {
+  			nextMove = "left";
+  		}
+  		else {
+  			nextMove = "right";
+  		}
   	}
-  	if (data.you.getHead().gety() == 0 && data.you.getHead().getx() != data.width-1) {
-  		nextMove = "right";
+  	if (ww == 11) {
+  		if (data.occupied(new XY(headpos.getx()+1, headpos.gety()))) {
+  			nextMove = "down";
+  		}
+  		else {
+  			nextMove = "right";
+  		}
   	}
-  	else if (data.you.getHead().gety() == data.height-1 && data.you.getHead().getx() != 0) {
-  		nextMove = "left";
+  	if (ww == 12) {
+  		if (data.occupied(new XY(headpos.getx()-1, headpos.gety()))) {
+  			nextMove = "down";
+  		}
+  		else {
+  			nextMove = "left";
+  		}
+  	}
+  	if (ww == 21) {
+  		if (data.occupied(new XY(headpos.getx()+1, headpos.gety()))) {
+  			nextMove = "up";
+  		}
+  		else {
+  			nextMove = "right";
+  		}
+  	}
+  	if (ww == 22) {
+  		if (data.occupied(new XY(headpos.getx()+1, headpos.gety()))) {
+  			nextMove = "up";
+  		}
+  		else {
+  			nextMove = "left";
+  		}
   	}
   }
 
@@ -58,6 +96,29 @@ public class CalculateMove{
   		}
   	}
   	nextMove = "up";
+  }
+
+  public int wallWarning(XY head, int width, int height) {
+  	int x = 1; //1-left wall, 2-right wall
+  	int y = 10;//1-up wall, 2-down wall
+  	if (head.getx() == 0) {
+  	}
+  	else if (head.getx() == width-1) {
+  		x*=2;
+  	}
+  	else {
+  		x = 0;
+  	}
+  	if (head.gety() == 0) {
+  	}
+  	else if (head.gety() == height-1) {
+  		y *= 2;
+  	}
+  	else {
+  		y = 0;
+  	}
+
+  	return x+y;
   }
 
 }
