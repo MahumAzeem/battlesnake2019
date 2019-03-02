@@ -1,16 +1,39 @@
 package io.battlesnake.starter;
 import java.util.ArrayList;
+import java.util.Random;
 
 public class CalculateMove{
   public String nextMove;
 
   public CalculateMove(GetData data){
   	//nextMove = "down";
-  	foodChaser(data.food[0], data.you);
+  	foodChaser(data);
   }
 
   public String getMove(){
     return this.nextMove;
+  }
+
+  public void foodChaser(GetData data) {
+  	if (data.food.length > 0) {
+  		foodChaser(data.food[0], data.you);
+  		return;
+  	}
+  	Random rand;
+  	int n = rand.nextInt(4);
+  	switch(n) {
+  		case 0:
+  			nextMove = "up";
+  			break;
+  		case 1:
+  			nextMove = "right";
+  			break;
+  		case 2:
+  			nextMove = "left";
+  			break;
+  		default:
+  			nextMove = "down";
+  	}
   }
 
   public void foodChaser(XY food, Snek snake) {
