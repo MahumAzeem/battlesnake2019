@@ -35,14 +35,14 @@ public class SnakeTest {
     void startTest() throws IOException {
         JsonNode startRequest = OBJECT_MAPPER.readTree("{}");
         Map<String, String> response = handler.start(startRequest);
-        assertEquals("#ff00ff", response.get("color"));
+        assertEquals("#54d396", response.get("color"));
     }
 
     @Test
     void moveTest() throws IOException {
         JsonNode moveRequest = OBJECT_MAPPER.readTree("{}");
         Map<String, String> response = handler.move(moveRequest);
-        assertEquals("right", response.get("move"));
+        assertEquals("down", response.get("move"));
     }
 
     @Test
