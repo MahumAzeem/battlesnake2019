@@ -17,14 +17,14 @@ public class CalculateMove{
   	XY pos = snake.getHead();
   	int x = food.getx() - pos.getx();
   	if (x > 0) {
-  		XY check(pos.getx()+1, pos.gety());
+  		XY check = new XY((pos.getx()+1, pos.gety()));
   		if (!snake.occupies(check)) {
   			nextMove = "right";
   			return;
   		}
   	}
   	else if (x < 0) {
-  		XY check(pos.getx()-1, pos.gety());
+  		XY check = new XY((pos.getx()-1, pos.gety()));
   		if (!snake.occupies(check)) {
   			nextMove = "left";
   			return;
@@ -32,7 +32,7 @@ public class CalculateMove{
   	}
   	x = food.gety() - pos.gety();
   	if (x > 0) {
-  		XY check(pos.getx(), pos.gety()+1);
+  		XY check = new XY((pos.getx(), pos.gety()+1));
   		if (!snake.occupies(check)) {
   			nextMove = "down";
   			return;
