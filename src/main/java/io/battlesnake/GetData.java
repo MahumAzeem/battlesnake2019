@@ -91,4 +91,16 @@ public class GetData {
 		return snake.occupies(pos);
 	}
 
+	//returns true if a larger snake could move into this spot
+	public boolean danger(XY pos) {
+		for (int i = 0; i < snakes.length; i++) {
+			if (snakes[i].getHead().getDistance(pos) == 1) {
+				if (snakes[i].size() < you.size()) {
+					continue;
+				}
+				return true;
+			}
+		}
+	}
+
 }
