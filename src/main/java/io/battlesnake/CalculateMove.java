@@ -24,7 +24,7 @@ public class CalculateMove{
   	else if (data.you.getHead().getx() == data.width-1) {
   		nextMove = "down";
   	}
-  	if (data.you.getHead().gety() == 0) {
+  	if (data.you.getHead().gety() == 0 && data.you.getHead().getx() != data.width-1) {
   		nextMove = "right";
   	}
   	else if (data.you.getHead().gety() == data.height-1 && data.you.getHead().getx() != 0) {
