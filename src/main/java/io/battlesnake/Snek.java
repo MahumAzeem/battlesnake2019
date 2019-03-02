@@ -47,7 +47,7 @@ public class Snek {
 	}
 
 	public boolean occupies(XY pos) {
-		for (int i = 0; i < body.size(); i++) {
+		for (int i = 0; i < body.size()-1; i++) {
 			if (body.get(i).getDistance(pos) == 0) {
 				return true;
 			}
