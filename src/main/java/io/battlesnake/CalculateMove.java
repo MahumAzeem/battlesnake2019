@@ -163,7 +163,7 @@ public class CalculateMove{
   }
 
   private String foodChaser(XY food) {
-    XY pos = data.you.getHead();
+    XY pos = snake.getHead();
     int x = food.getx() - pos.getx();
     if (x > 0) {
       XY check = new XY(pos.getx()+1, pos.gety());
@@ -234,14 +234,14 @@ public class CalculateMove{
       */
     }
 
-    else if (data.occupied(new XY(headpos.getx()-1, headpos.gety()))) {
+    else if (data.occupied(new XY(headpos.getx()-1, headpos.gety())) || ww==1 || ww==11 || ww==21 ) {
         /*    O
             X S O
               O
         */
         newPos.setx(headpos.getx() + 1);
     }
-    else if (data.occupied(new XY(headpos.getx()+1, headpos.gety()))){
+    else if (data.occupied(new XY(headpos.getx()+1, headpos.gety()))|| ww==2 || ww==12 || ww==22){
       /*    O
           O S X
             O
@@ -257,14 +257,14 @@ public class CalculateMove{
       */
     }
 
-    else if (data.occupied(new XY(headpos.getx(), headpos.gety()-1))){
+    else if (data.occupied(new XY(headpos.getx(), headpos.gety()-1))|| ww==20 || ww==21 || ww==22){
       /*    O
           O S O
             X
       */
       newPos.sety(headpos.gety() + 1);
     }
-    else if (data.occupied(new XY(headpos.getx(), headpos.gety()+1)) ){
+    else if (data.occupied(new XY(headpos.getx(), headpos.gety()+1)) || ww==10 || ww==11 || ww==12 ){
       /*    X
           O S O
             O
@@ -284,7 +284,7 @@ public class CalculateMove{
       return "left";
     }
     else if((curry-newy) >= 1){
-      return "left";
+      return "up";
     }
     else if((curry-newy) <= -1){
       return "down";
