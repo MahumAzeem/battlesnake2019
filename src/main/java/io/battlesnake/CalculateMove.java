@@ -34,15 +34,15 @@ public class CalculateMove{
       if (data.occupied(new XY(headpos.getx(), headpos.gety() -1 )) || data.danger(new XY(headpos.getx(), headpos.gety() -1 ))) {
         return "down";
       }
-      else {
+      else if (data.occupied(new XY(headpos.getx(), headpos.gety() +1 )) || data.danger(new XY(headpos.getx(), headpos.gety() +1 ))) {
         return "up";
       }
     }
-    if (ww == 10 || ww == 20) {
-      if (data.occupied(new XY(headpos.getx()+1, headpos.gety())) || data.danger(new XY(headpos.getx()+1, headpos.gety())) ) {
+    else if (ww == 10 || ww == 20) {
+      if (data.occupied(new XY(headpos.getx()+1, headpos.gety())) || data.danger(new XY(headpos.getx()+1, headpos.gety()))) {
         return "left";
       }
-      else {
+      else if (data.occupied(new XY(headpos.getx()-1, headpos.gety())) || data.danger(new XY(headpos.getx()-1, headpos.gety()))) {
         return "right";
       }
     }
@@ -80,17 +80,16 @@ public class CalculateMove{
     }
 
     
-    if (!(data.occupied(new XY(headpos.getx(), headpos.gety() -1 )) || data.danger(new XY(headpos.getx(), headpos.gety() -1 )))) {
+    if (!(data.occupied(new XY(headpos.getx(), headpos.gety() -1 )) || data.danger(new XY(headpos.getx(), headpos.gety() -1 ))) && you.getHead().gety() != 0) {
       return "up";
     }
-    if (!(data.occupied(new XY(headpos.getx(), headpos.gety() + 1 )) || data.danger(new XY(headpos.getx(), headpos.gety() +1 )))) {
+    if (!(data.occupied(new XY(headpos.getx(), headpos.gety() + 1 )) || data.danger(new XY(headpos.getx(), headpos.gety() +1 )))&& you.getHead().gety() != data.height-1) {
       return "down";
     }
-    if (!(data.occupied(new XY(headpos.getx()+1, headpos.gety())) || data.danger(new XY(headpos.getx()+1, headpos.gety())))) {
+    if (!(data.occupied(new XY(headpos.getx()+1, headpos.gety())) || data.danger(new XY(headpos.getx()+1, headpos.gety()))) && you.getHead().getx() != data.width-1) {
       return "right";
     }
-
-    if (!(data.occupied(new XY(headpos.getx()-1, headpos.gety())) || data.danger(new XY(headpos.getx()-1, headpos.gety())))) {
+    if (!(data.occupied(new XY(headpos.getx()-1, headpos.gety())) || data.danger(new XY(headpos.getx()-1, headpos.gety()))) && you.getHead().getx() != 0) {
       return "left";
     }    
     
