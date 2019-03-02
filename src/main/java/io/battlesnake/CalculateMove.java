@@ -120,7 +120,11 @@ public class CalculateMove{
   	return x+y;
   }
 
-  public String getMove(XY headpos, XY[] enemies){
+  public String getMove(){
+    return getMove(data.you.getHead(),data.Snakes() )
+  }
+
+  private String getMove(XY headpos, XY[] enemies){
     XY newPos = new XY(headpos.getx(),headpos.gety());
     int ww = wallWarning(headpos, data.width, data.height);
 
