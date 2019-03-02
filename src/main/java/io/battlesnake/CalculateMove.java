@@ -21,7 +21,12 @@ public class CalculateMove{
         foodind = i;
       }
     }
-    if (food.length > 0) return foodChaser(food[foodind]);
+    if (food.length > 0) {
+      String fc = foodChaser(food[foodind]);
+      if (!fc.equals("escape")) {
+        return fc;
+      }
+    }
 
     XY headpos = you.getHead();
     int ww = wallWarning(headpos, data.width, data.height);
@@ -98,7 +103,14 @@ public class CalculateMove{
         return "down";
       }
     }
-    return "up";
+    else if (x < 0) {
+      XY check = new XY(pos.getx(), pos.gety()-1);
+      if (!data.occupied(check) && !data.danger(check)) {
+        return "up";
+      }
+    }
+    int ww = wallWarning(pos, data.width, data.height);
+    return "escape";
   }
 
   public int wallWarning(XY head, int width, int height) {
