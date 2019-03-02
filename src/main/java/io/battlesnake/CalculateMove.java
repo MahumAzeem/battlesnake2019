@@ -163,7 +163,7 @@ public class CalculateMove{
   }
 
   private String foodChaser(XY food) {
-    XY pos = snake.getHead();
+    XY pos = data.you.getHead();
     int x = food.getx() - pos.getx();
     if (x > 0) {
       XY check = new XY(pos.getx()+1, pos.gety());
