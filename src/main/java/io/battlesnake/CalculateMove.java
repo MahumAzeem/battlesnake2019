@@ -30,10 +30,10 @@ public class CalculateMove{
   	}
   	if (ww == 10 || ww == 20) {
   		if (data.occupied(new XY(headpos.getx()-1, headpos.gety()))) {
-  			nextMove = "left";
+  			nextMove = "right";
   		}
   		else {
-  			nextMove = "right";
+  			nextMove = "left";
   		}
   	}
   	if (ww == 11) {
