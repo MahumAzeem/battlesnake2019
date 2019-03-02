@@ -187,10 +187,10 @@ public class CalculateMove{
     int newx=newPos.getx();
     int newy=newPos.gety();
     ///////////////TURN FROM XY TO DIRECTIONS///////////
-    if((currx-newx) == 1){
+    if((currx-newx) == -1){
       return "right";
     }
-    else if((currx-newx) == -1){
+    else if((currx-newx) == 1){
       return "left";
     }
     else if((curry-newy) == 1){
