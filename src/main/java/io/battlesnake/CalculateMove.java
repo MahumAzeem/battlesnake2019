@@ -144,14 +144,14 @@ public class CalculateMove{
       */
     }
 
-    else if (data.occupied(new XY(headpos.getx()-1, headpos.gety()))  || ww == 1) {
+    else if (data.occupied(new XY(headpos.getx()-1, headpos.gety()))) {
         /*    O
             X S O
               O
         */
         newPos.setx(headpos.getx() + 1);
     }
-    else if (data.occupied(new XY(headpos.getx()+1, headpos.gety()))  ||  ww == 2){
+    else if (data.occupied(new XY(headpos.getx()+1, headpos.gety()))){
       /*    O
           O S X
             O
@@ -167,14 +167,14 @@ public class CalculateMove{
       */
     }
 
-    else if (data.occupied(new XY(headpos.getx(), headpos.gety()-1)) || ww == 20){
+    else if (data.occupied(new XY(headpos.getx(), headpos.gety()-1))){
       /*    O
           O S O
             X
       */
       newPos.sety(headpos.gety() + 1);
     }
-    else if (data.occupied(new XY(headpos.getx(), headpos.gety()+1)) || ww == 10){
+    else if (data.occupied(new XY(headpos.getx(), headpos.gety()+1)) ){
       /*    X
           O S O
             O
