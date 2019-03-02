@@ -123,7 +123,8 @@ public class Snake {
             GetData dataparser = new GetData(moveRequest);
             Map<String, String> response = new HashMap<>();
             CalculateMove nextmove = new CalculateMove(dataparser);
-            response.put("move", nextmove.foodChaser());
+            nextmove.foodChaser();
+            response.put("move", "right");
             return response;
         }
 
