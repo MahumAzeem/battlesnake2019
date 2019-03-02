@@ -21,7 +21,7 @@ public class Snek {
 	---------------------------------------*/
 	//adds a body part, intended only for initializing
 	public void addBod(XY bod) {
-		body.add(XY);
+		body.add(bod);
 	}
 
 	//adds an extra part at the tail
@@ -44,7 +44,7 @@ public class Snek {
 	//removes the tail, adds a new XY for the head
 	public void move(XY newpos) {
 		body.remove(getTailInd());
-		body.add(newpos, 0);
+		body.add(0, newpos);
 			
 	}
 
