@@ -10,8 +10,6 @@ import spark.Response;
 import java.util.HashMap;
 import java.util.Map;
 
-import java.util.logging.FileHandler;
-
 import static spark.Spark.port;
 import static spark.Spark.post;
 import static spark.Spark.get;
@@ -33,7 +31,6 @@ public class Snake {
      */
     public static void main(String[] args) {
         String port = System.getProperty("PORT");
-        LOG.addHandler(handler);
 
         if (port != null) {
             LOG.info("Found system provided port: {}", port);
