@@ -125,8 +125,9 @@ public class Snake {
         	dataparser.update(moveRequest);
 
             Map<String, String> response = new HashMap<>();
-            String nextMove = "left";
-            response.put("move", nextMove);
+            //String nextMove = CalculateMove(dataparser);
+            //response.put("move", nextMove);
+            response.put(null, null);
             return response;
         }
 
