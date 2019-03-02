@@ -9,7 +9,7 @@ public class CalculateMove{
   }
 
   public String getMove(){
-    return nextMove;
+    return this.nextMove;
   }
 
 }
