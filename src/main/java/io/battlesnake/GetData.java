@@ -18,7 +18,13 @@ public class GetData {
 
 	//initializes the data
 	public GetData(JsonNode data) {
-		FileHandler fh = new FileHandler("./logs/log", true);
+		FileHandler fh;
+		try {
+			fh = new FileHandler("./logs/log", true);
+		}
+		catch(Exception e) {
+			
+		}
 		Logger logger = Logger.getLogger("logtest");
 		logger.addHandler(fh);
 		logger.setLevel(Level.ALL);
