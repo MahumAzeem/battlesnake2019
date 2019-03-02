@@ -42,6 +42,7 @@ public class GetData {
 				return true;
 			}
 		}
+		return false;
 	}
 
 	private void initsnakes(JsonNode data) {
