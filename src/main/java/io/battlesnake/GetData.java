@@ -21,9 +21,9 @@ public class GetData {
 		height = data.get("board").get("height").asInt();
 		width = data.get("board").get("width").asInt();
 		board = new int[width][height];
-		//refood(data);
-		initsnakes(data);
-		initself(data);
+		refood(data);
+		//initsnakes(data);
+		//initself(data);
 	}
 
 	/*
