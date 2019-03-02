@@ -1,6 +1,5 @@
 package io.battlesnake.starter;
 import java.util.ArrayList;
-import java.util.Random;
 
 public class CalculateMove{
   public String nextMove;
@@ -19,20 +18,17 @@ public class CalculateMove{
   		foodChaser(data.food[0], data.you);
   		return;
   	}
-  	Random rand = new Random();
-  	int n = rand.nextInt(4);
-  	switch(n) {
-  		case 0:
-  			nextMove = "up";
-  			break;
-  		case 1:
-  			nextMove = "right";
-  			break;
-  		case 2:
-  			nextMove = "left";
-  			break;
-  		default:
-  			nextMove = "down";
+  	if (data.you.getHead().getx() == 0) {
+  		nextMove = "up";
+  	}
+  	else if (data.you.getHead().getx() == data.width-1) {
+  		nextMove = "down";
+  	}
+  	if (data.you.getHead().gety() == 0) {
+  		nextMove = "right";
+  	}
+  	else if (data.you.getHead().gety() == data.height-1) {
+  		nextMove = "left";
   	}
   }
 
