@@ -124,7 +124,14 @@ public class CalculateMove{
     return getMove(data.you.getHead(),data.Snakes() )
   }
 
-  private String getMove(XY headpos, XY[] enemies){
+  private String getMove(XY headpos, Snek[] snakes){
+    ArrayList<XY> allpos = new ArrayList<XY>();
+    for (int i = 0; i < snakes.length; i++) {
+      allpos.addAll(snakes[i].body);
+    }
+    XY[] enemies = allpos.toArray();
+
+    
     XY newPos = new XY(headpos.getx(),headpos.gety());
     int ww = wallWarning(headpos, data.width, data.height);
 
