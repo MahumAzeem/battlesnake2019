@@ -55,6 +55,25 @@ public class Snek {
 		return false;
 	}
 
+	//0-???, 1-left, 2-up, 3-right, 4-down
+	public int facing() {
+		int dx = body.get(0).getx() - body.get(1).getx();
+		if (dx < 0) {
+			return 1;
+		}
+		else if (dx > 0) {
+			return 3;
+		}
+		int dy = body.get(0).gety() - body.get(1).gety();
+		if (dy < 0) {
+			return 2;
+		}
+		else if (dy > 0) {
+			return 4;
+		}
+		return 0;
+	}
+
 	/*-------------------------------------
 				Health Methods
 	---------------------------------------*/
