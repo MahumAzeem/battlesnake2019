@@ -21,30 +21,30 @@ public class GetData {
 		FileHandler fh;
 		try {
 			fh = new FileHandler("./logs/log", true);
+			Logger logger = Logger.getLogger("logtest");
+			logger.addHandler(fh);
+			logger.setLevel(Level.ALL);
+			logger.log(Level.INFO, "Init");
+
+			id = data.get("game").get("id").asText();
+			logger.log(Level.INFO, "id");
+			turn = data.get("turn").asInt();
+			logger.log(Level.INFO, "turn");
+			height = data.get("board").get("height").asInt();
+			logger.log(Level.INFO, "height");
+			width = data.get("board").get("width").asInt();
+			logger.log(Level.INFO, "width");
+			board = new int[width][height];
+			refood(data);
+			logger.log(Level.INFO, "food");
+			initsnakes(data);
+			logger.log(Level.INFO, "snakes");
+			initself(data);
+			logger.log(Level.INFO, "you");
 		}
 		catch(Exception e) {
-			
+			return null;
 		}
-		Logger logger = Logger.getLogger("logtest");
-		logger.addHandler(fh);
-		logger.setLevel(Level.ALL);
-		logger.log(Level.INFO, "Init");
-
-		id = data.get("game").get("id").asText();
-		logger.log(Level.INFO, "id");
-		turn = data.get("turn").asInt();
-		logger.log(Level.INFO, "turn");
-		height = data.get("board").get("height").asInt();
-		logger.log(Level.INFO, "height");
-		width = data.get("board").get("width").asInt();
-		logger.log(Level.INFO, "width");
-		board = new int[width][height];
-		refood(data);
-		logger.log(Level.INFO, "food");
-		initsnakes(data);
-		logger.log(Level.INFO, "snakes");
-		initself(data);
-		logger.log(Level.INFO, "you");
 	}
 
 	/*
