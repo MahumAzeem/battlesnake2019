@@ -165,8 +165,8 @@ public class CalculateMove{
 
     /////////////checks y///////////////////
     if (     (data.occupied(new XY(headpos.getx(), headpos.gety()-1)) && data.occupied(new XY(headpos.getx(), headpos.gety()+1))   )
-          || (data.occupied(new XY(headpos.getx(), headpos.gety()-1)) && (w==11 ||ww==12||ww==10) )
-          || (data.occupied(new XY(headpos.getx(), headpos.gety()+1)) && (w==21 ||ww==22||ww==20) )      ){
+          || (data.occupied(new XY(headpos.getx(), headpos.gety()-1)) && (ww==11 ||ww==12||ww==10) )
+          || (data.occupied(new XY(headpos.getx(), headpos.gety()+1)) && (ww==21 ||ww==22||ww==20) )      ){
       /*    X
           O S O
             X
