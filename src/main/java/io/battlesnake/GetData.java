@@ -63,7 +63,7 @@ public class GetData {
 	private Snek initsnake(JsonNode snake) {
 		Snek temp = new Snek(snake.get("id").asText(), snake.get("name").asText(), snake.get("health").asInt());
 		int size = snake.get("body").size();
-		if (size == 0) continue; //it's dead
+		
 		for (int j = 0; j < size; j++) {
 			temp.addBod(new XY(snake.get("body").get("x").asInt(), snake.get("body").get("y").asInt()));
 		}
@@ -84,6 +84,9 @@ public class GetData {
 		stored.move(h);
 		if (snake.get("body").size() > stored.size()) {
 			stored.grow();
+		}
+		if (snake.get("body").size() == 0) {
+			stored.body.clear();
 		}
 		stored.sethp(snake.get("health").asInt());
 	}

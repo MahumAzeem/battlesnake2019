@@ -26,7 +26,7 @@ public class Snek {
 
 	//adds an extra part at the tail
 	public void grow() {
-		XY t = new XY();
+		XY t = new XY(0,0);
 		t.seta(body.get(getTailInd()).geta());
 		body.add(t);
 	}
