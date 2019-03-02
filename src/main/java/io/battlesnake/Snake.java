@@ -23,6 +23,7 @@ public class Snake {
     private static final ObjectMapper JSON_MAPPER = new ObjectMapper();
     private static final Handler HANDLER = new Handler();
     private static final Logger LOG = LoggerFactory.getLogger(Snake.class);
+    private GetData dataparser;
 
     /**
      * Main entry point.
@@ -106,6 +107,9 @@ public class Snake {
          * @return a response back to the engine containing the snake setup values.
          */
         public Map<String, String> start(JsonNode startRequest) {
+        	//Initialize dataparser
+        	dataparser = new GetData(startRequest);
+
             Map<String, String> response = new HashMap<>();
             response.put("color", "#54d396");
             return response;
@@ -118,6 +122,9 @@ public class Snake {
          * @return a response back to the engine containing snake movement values.
          */
         public Map<String, String> move(JsonNode moveRequest) {
+        	//update existing stored data
+        	dataparser.update(moveRequest);
+
             Map<String, String> response = new HashMap<>();
             String nextMove = "left";
             response.put("move", nextMove);
@@ -131,6 +138,9 @@ public class Snake {
          * @return responses back to the engine are ignored.
          */
         public Map<String, String> end(JsonNode endRequest) {
+        	//update existing stored data
+        	dataparser.update(moveRequest);
+        	
             Map<String, String> response = new HashMap<>();
             return response;
         }
