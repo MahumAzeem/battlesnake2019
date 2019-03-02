@@ -98,7 +98,7 @@ public class GetData {
 				if (snakes[i].size() < you.size()) {
 					continue;
 				}
-				//return true;
+				return true;
 			}
 		}
 		return false;
