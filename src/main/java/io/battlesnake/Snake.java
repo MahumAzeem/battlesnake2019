@@ -105,7 +105,7 @@ public class Snake {
          * @return a response back to the engine containing the snake setup values.
          */
         public Map<String, String> start(JsonNode startRequest) {
-            //GetData dataparser = new GetData(startRequest);
+            GetData dataparser = new GetData(startRequest);
             Map<String, String> response = new HashMap<>();
             response.put("color", "#ff00ff");
             return response;
@@ -118,7 +118,7 @@ public class Snake {
          * @return a response back to the engine containing snake movement values.
          */
         public Map<String, String> move(JsonNode moveRequest) {
-            //GetData dataparser = new GetData(moveRequest);
+            GetData dataparser = new GetData(moveRequest);
             Map<String, String> response = new HashMap<>();
             CalculateMove nextmove = new CalculateMove();
             response.put("move", nextmove.getMove());
