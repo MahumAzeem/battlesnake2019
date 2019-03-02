@@ -95,7 +95,7 @@ public class GetData {
 	public boolean danger(XY pos) {
 		for (int i = 0; i < snakes.length; i++) {
 			if (snakes[i].getHead().getDistance(pos) == 1) {
-				if (snakes[i].size() < you.size()) {
+				if (snakes[i].size() <= you.size()) {
 					continue;
 				}
 				return true;
