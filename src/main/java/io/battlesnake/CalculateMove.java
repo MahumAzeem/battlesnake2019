@@ -10,93 +10,6 @@ public class CalculateMove{
   	this.data = data;
   }
 
-
-
-  /*public void foodChaser(GetData data) {
-  	if (data.food.length > 0) {
-  		foodChaser(data.food[0], data.you);
-  		return;
-  	}
-  	XY headpos = data.you.getHead();
-  	int ww = wallWarning(headpos, data.width, data.height);
-  	if (ww == 1 || ww == 2) {
-  		if (data.occupied(new XY(headpos.getx(), headpos.gety() -1 ))) {
-  			nextMove = "down";
-  		}
-  		else {
-  			nextMove = "up";
-  		}
-  	}
-  	if (ww == 10 || ww == 20) {
-  		if (data.occupied(new XY(headpos.getx()-1, headpos.gety()))) {
-  			nextMove = "left";
-  		}
-  		else {
-  			nextMove = "right";
-  		}
-  	}
-  	if (ww == 11) {
-  		if (data.occupied(new XY(headpos.getx()+1, headpos.gety()))) {
-  			nextMove = "down";
-  		}
-  		else {
-  			nextMove = "right";
-  		}
-  	}
-  	if (ww == 12) {
-  		if (data.occupied(new XY(headpos.getx()-1, headpos.gety()))) {
-  			nextMove = "down";
-  		}
-  		else {
-  			nextMove = "left";
-  		}
-  	}
-  	if (ww == 21) {
-  		if (data.occupied(new XY(headpos.getx()+1, headpos.gety()))) {
-  			nextMove = "up";
-  		}
-  		else {
-  			nextMove = "right";
-  		}
-  	}
-  	if (ww == 22) {
-  		if (data.occupied(new XY(headpos.getx()+1, headpos.gety()))) {
-  			nextMove = "up";
-  		}
-  		else {
-  			nextMove = "left";
-  		}
-  	}
-  }
-
-  public void foodChaser(XY food, Snek snake) {
-  	XY pos = snake.getHead();
-  	int x = food.getx() - pos.getx();
-  	if (x > 0) {
-  		XY check = new XY(pos.getx()+1, pos.gety());
-  		if (!snake.occupies(check)) {
-  			nextMove = "right";
-  			return;
-  		}
-  	}
-  	else if (x < 0) {
-  		XY check = new XY(pos.getx()-1, pos.gety());
-  		if (!snake.occupies(check)) {
-  			nextMove = "left";
-  			return;
-  		}
-  	}
-  	x = food.gety() - pos.gety();
-  	if (x > 0) {
-  		XY check = new XY(pos.getx(), pos.gety()+1);
-  		if (!snake.occupies(check)) {
-  			nextMove = "down";
-  			return;
-  		}
-  	}
-  	nextMove = "up";
-  }
-*/
   public String foodChaser() {
     Snek you = data.you;
     int foodind = 0;
@@ -104,6 +17,7 @@ public class CalculateMove{
     XY[] food = data.food;
     for (int i = 0; i < food.length; i++) {
       if (you.getHead().getDistance(food[i]) < mindis) {
+        mindis = you.getHead().getDistance(food[i]);
         foodind = i;
       }
     }
@@ -163,7 +77,7 @@ public class CalculateMove{
   }
 
   private String foodChaser(XY food) {
-    XY pos = snake.getHead();
+    XY pos = data.you.getHead();
     int x = food.getx() - pos.getx();
     if (x > 0) {
       XY check = new XY(pos.getx()+1, pos.gety());
